@@ -1,0 +1,42 @@
+{
+  "name": "fs-access",
+  "version": "1.0.0",
+  "description": "fs.access ponyfill for older versions of Node.js",
+  "keywords": [
+    "fs",
+    "access",
+    "exists",
+    "pollyfill",
+    "ponyfill"
+  ],
+  "homepage": "https://github.com/kmalakoff/fs-access",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kmalakoff/fs-access.git"
+  },
+  "license": "MIT",
+  "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
+  "main": "index.js",
+  "scripts": {
+    "format": "eslint . --fix",
+    "lint": "eslint .",
+    "test": "mocha-compat test/spec/**/*.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "lodash.flattendeep": "^4.4.0",
+    "mocha-compat": "^3.5.5",
+    "prettier": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
