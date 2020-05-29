@@ -1,4 +1,4 @@
-## fs-access
+## fs-access-compat
 
 fs.access ponyfill for older versions of Node.js.
 

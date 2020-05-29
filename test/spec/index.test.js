@@ -2,7 +2,7 @@ var assert = require('assert');
 
 var access = require('../..');
 
-describe('fs-access', function () {
+describe('fs-access-compat', function () {
   it('exists', function (done) {
     access(__filename, function (err) {
       assert.ok(!err);
