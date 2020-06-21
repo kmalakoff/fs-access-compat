@@ -1,5 +1,4 @@
 var fs = require('fs');
-var errno = require('errno');
 
 function existsAccess(fullPath, callback) {
   // eslint-disable-next-line node/no-deprecated-api
@@ -7,7 +6,7 @@ function existsAccess(fullPath, callback) {
     if (exists) return callback();
     var err = new Error("ENOENT: no such file or directory, access '" + fullPath + "'");
     err.code = 'ENOENT';
-    err.errno = errno.code.ENOENT;
+    err.errno = -2;
     callback(err);
   });
 }
