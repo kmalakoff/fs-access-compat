@@ -1,1 +1,1 @@
-ignores: ["fs-access-compat", "@types/*", "@biomejs/*"]
+ignores: ["fs-access-compat"]
