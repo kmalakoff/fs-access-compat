@@ -5,7 +5,7 @@ const access = require('fs-access-compat');
 describe('fs-access-compat', () => {
   it('exists', (done) => {
     access(__filename, (err) => {
-      if (err) return done(err);
+      if (err) return done(err.message);
       done();
     });
   });
