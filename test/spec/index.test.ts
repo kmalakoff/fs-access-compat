@@ -1,17 +1,21 @@
-const assert = require('assert');
+import assert from 'assert';
+import url from 'url';
 
-const access = require('fs-access-compat');
+// @ts-ignore
+import access from 'fs-access-compat';
+
+const ___fileanme = typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url);
 
 describe('fs-access-compat', () => {
   it('exists', (done) => {
-    access(__filename, (err) => {
+    access(___fileanme, (err) => {
       if (err) return done(err.message);
       done();
     });
   });
 
   it('does not exist', (done) => {
-    access(`${__filename}junk`, (err) => {
+    access(`${___fileanme}junk`, (err) => {
       assert.ok(err);
       assert.equal(err.message.indexOf('ENOENT'), 0);
       assert.equal(err.code, 'ENOENT');
