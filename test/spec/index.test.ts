@@ -1,8 +1,7 @@
 import assert from 'assert';
-import url from 'url';
-
 // @ts-ignore
 import access from 'fs-access-compat';
+import url from 'url';
 
 const ___fileanme = typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url);
 
