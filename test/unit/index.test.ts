@@ -8,7 +8,10 @@ const ___fileanme = typeof __filename !== 'undefined' ? __filename : url.fileURL
 describe('fs-access-compat', () => {
   it('exists', (done) => {
     access(___fileanme, (err) => {
-      if (err) return done(err.message);
+      if (err) {
+        done(err.message);
+        return;
+      }
       done();
     });
   });
