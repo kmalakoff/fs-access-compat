@@ -1,5 +1,4 @@
 import assert from 'assert';
-// @ts-ignore
 import access from 'fs-access-compat';
 import url from 'url';
 
