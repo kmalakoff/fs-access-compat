@@ -8,7 +8,7 @@ describe('fs-access-compat', () => {
   it('exists', (done) => {
     access(___fileanme, (err) => {
       if (err) {
-        done(err.message);
+        done(err);
         return;
       }
       done();
