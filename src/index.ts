@@ -9,7 +9,7 @@ function accessError(fullPath: string): NodeJS.ErrnoException {
 
 export type NoParamCallback = (err: NodeJS.ErrnoException | null) => void;
 
-export default (fullPath: string, callback: NoParamCallback): undefined => {
+export default (fullPath: string, callback: NoParamCallback): void => {
   fs.stat(fullPath, (err) => {
     return err ? callback(accessError(fullPath)) : callback(null);
   });
