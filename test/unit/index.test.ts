@@ -7,10 +7,7 @@ const ___fileanme = typeof __filename !== 'undefined' ? __filename : url.fileURL
 describe('fs-access-compat', () => {
   it('exists', (done) => {
     access(___fileanme, (err) => {
-      if (err) {
-        done(err.message);
-        return;
-      }
+      if (err) return done(err);
       done();
     });
   });
@@ -20,7 +17,7 @@ describe('fs-access-compat', () => {
       assert.ok(err);
       assert.equal(err.message.indexOf('ENOENT'), 0);
       assert.equal(err.code, 'ENOENT');
-      assert.ok(~[-2, -4058].indexOf(err.errno));
+      assert.ok(~[-2, -4058].indexOf(err.errno ?? 0));
       done();
     });
   });
