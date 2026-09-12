@@ -1,5 +1,5 @@
 {
-  "name": "fs-access",
+  "name": "fs-access-compat",
   "version": "1.0.0",
   "description": "fs.access ponyfill for older versions of Node.js",
   "keywords": [
@@ -9,10 +9,10 @@
     "pollyfill",
     "ponyfill"
   ],
-  "homepage": "https://github.com/kmalakoff/fs-access",
+  "homepage": "https://github.com/kmalakoff/fs-access-compat",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kmalakoff/fs-access.git"
+    "url": "git@github.com:kmalakoff/fs-access-compat.git"
   },
   "license": "MIT",
   "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
